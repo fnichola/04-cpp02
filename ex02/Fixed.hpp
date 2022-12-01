@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 02:49:52 by fnichola          #+#    #+#             */
-/*   Updated: 2022/11/30 02:58:26 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/01 01:18:06 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,28 @@ public:
 	void setRawBits(int const raw);
 	float toFloat() const;
 	int toInt() const;
+
+	bool operator<(const Fixed& rhs) const;
+	bool operator>(const Fixed& rhs) const;
+	bool operator<=(const Fixed& rhs) const;
+	bool operator>=(const Fixed& rhs) const;
+	bool operator==(const Fixed& rhs) const;
+	bool operator!=(const Fixed& rhs) const;
+	
+	Fixed operator+(const Fixed& rhs) const;
+	Fixed operator-(const Fixed& rhs) const;
+	Fixed operator*(const Fixed& rhs) const;
+	Fixed operator/(const Fixed& rhs) const;
+
+	Fixed& operator++(); // ++prefix
+	Fixed& operator--(); // --prefix
+	Fixed operator++(int); // postfix++
+	Fixed operator--(int); // postfix--
+
+	static Fixed& min(Fixed& a, Fixed& b);
+	static const Fixed& min(const Fixed& a, const Fixed& b);
+	static Fixed& max(Fixed& a, Fixed& b);
+	static const Fixed& max(const Fixed& a, const Fixed& b);
 
 private:
 	int m_value;
