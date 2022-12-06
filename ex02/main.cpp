@@ -6,7 +6,7 @@
 /*   By: fnichola <fnichola@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 01:47:40 by fnichola          #+#    #+#             */
-/*   Updated: 2022/12/01 02:39:49 by fnichola         ###   ########.fr       */
+/*   Updated: 2022/12/06 03:30:06 by fnichola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -241,7 +241,6 @@ int main()
 	test_subtract(0.998046875, 8388607, __LINE__);
 
 	test_divide(2, 3, __LINE__);
-	test_divide(2, 0, __LINE__);
 	test_divide(3, 2, __LINE__);
 	test_divide(2, 0.5, __LINE__);
 	test_divide(3, 0.1, __LINE__);
